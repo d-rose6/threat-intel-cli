@@ -1,9 +1,6 @@
 import socket
 
-
 def escanear_porta(ip, porta):
-
-
     # Cria um objeto de socket TCP (AF_INET = IPv4, SOCK_STREAM = TCP)
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
@@ -16,9 +13,7 @@ def escanear_porta(ip, porta):
 
     return resultado == 0
 
-
 def iniciar_scan(ip):
-
     # Portas clássicas que geralmente são monitoradas
     portas_comuns = {
         21: "FTP (Transferência de Arquivos)",
@@ -42,10 +37,10 @@ def iniciar_scan(ip):
         else:
             status_final = "Fechada"
 
-
         resultados_scan[porta] = {
             "servico": servico,
             "status": status_final
         }
 
-        return resultados_scan
+
+    return resultados_scan
